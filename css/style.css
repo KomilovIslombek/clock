@@ -1,0 +1,106 @@
+/* Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Arvo:wght@400;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arvo', serif;
+}
+body{
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: #111111;
+}
+.heading{
+    position: relative;
+    color: #fff;
+}
+.clock{
+    width: 450px;
+    height: 450px;
+    background-image: url(../img/clock.png);
+    background-size: cover;
+    display: grid;
+    place-items: center;
+    /* border: 1px solid red; */
+}
+.clock::before{
+    content: "";
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    background: #fff;
+    border-radius: 50%;
+    z-index: 999;
+}
+.clock .hour,
+.clock .min,
+.clock .sec {
+    position: absolute;
+}
+
+.clock .hour,
+.hr {
+    width: 160px;
+    height: 160px;
+    /* transform: rotateZ(0deg); */
+    /* border: 1px solid red; */
+}
+
+.clock .min,
+.mn {
+    width: 190px;
+    height: 190px;
+    /* transform: rotateZ(480deg); */
+    /* border: 1px solid yellow; */
+}
+
+.clock .sec,
+.sc {
+    width: 230px;
+    height: 230px;
+    /* transform: rotateZ(80deg); */
+    /* border: 1px solid yellow; */
+}
+
+.hr,
+.mn,
+.sc {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+}
+
+.hr::before{
+    content: "";
+    position: absolute;
+    width: 6px;
+    height: 80px;
+    background: #494c97;
+    border-radius: 6px 6px 0 0;
+    z-index: 10;
+}
+
+.mn::before{
+    content: "";
+    position: absolute;
+    width: 4px;
+    height: 90px;
+    background: #feff00;
+    border-radius: 6px 6px 0 0;
+    z-index: 11;
+}
+
+.sc::before{
+    content: "";
+    position: absolute;
+    width: 2px;
+    height: 150px;
+    background: #fff;
+    border-radius: 6px 6px 0 0;
+    z-index: 12;
+}
